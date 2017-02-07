@@ -11,6 +11,18 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+
+    }
+    productFlavors {
+        // releaseType
+        product {
+            minSdkVersion 15
+        }
+        dev {
+            // minSdkVersionを21に設定するとmultidexでのビルドが速くなる
+            minSdkVersion 21
+        }
     }
     buildTypes {
         release {
@@ -22,7 +34,11 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 }
-
+// RxLifecycle
+def rxLifecycle = '1.0'
+// RxBinding
+def rxBindingVersion = '1.0.0'
+//retrofit
 def retrofit_version = "2.1.0"
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -39,7 +55,23 @@ dependencies {
     compile "com.squareup.retrofit2:converter-gson:$retrofit_version"
     //RxJava
     compile 'io.reactivex:rxandroid:1.2.1'
-    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'io.reactivex:rxjava:1.2.3'
+    // RxLifecycle
+    compile "com.trello:rxlifecycle:$rxLifecycle"
+    compile "com.trello:rxlifecycle-android:$rxLifecycle"
+    compile "com.trello:rxlifecycle-components:$rxLifecycle"
+    compile "com.trello:rxlifecycle-kotlin:$rxLifecycle"
+    // RxBinding
+    compile "com.jakewharton.rxbinding:rxbinding:$rxBindingVersion"
+    compile "com.jakewharton.rxbinding:rxbinding-support-v4:$rxBindingVersion"
+    compile "com.jakewharton.rxbinding:rxbinding-appcompat-v7:$rxBindingVersion"
+    compile "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:$rxBindingVersion"
+    compile "com.jakewharton.rxbinding:rxbinding-kotlin:$rxBindingVersion"
+    compile "com.jakewharton.rxbinding:rxbinding-support-v4-kotlin:$rxBindingVersion"
+    compile "com.jakewharton.rxbinding:rxbinding-appcompat-v7-kotlin:$rxBindingVersion"
+    compile "com.jakewharton.rxbinding:rxbinding-recyclerview-v7-kotlin:$rxBindingVersion"
+    // MultiDex
+    compile 'com.android.support:multidex:1.0.1'
 
 
 
