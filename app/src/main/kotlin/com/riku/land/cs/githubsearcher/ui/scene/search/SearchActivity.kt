@@ -1,8 +1,8 @@
-package com.riku.land.cs.githubsercher.ui.scene.search
+package com.riku.land.cs.githubsearcher.ui.scene.search
 
 import android.os.Bundle
-import com.riku.land.cs.githubsercher.BaseActivity
-import com.riku.land.cs.githubsercher.R
+import com.riku.land.cs.githubsearcher.BaseActivity
+import com.riku.land.cs.githubsearcher.R
 
 /**
  * Created by riku_maehara on 17/02/08.

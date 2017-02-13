@@ -1,4 +1,4 @@
-package com.riku.land.cs.githubsercher
+package com.riku.land.cs.githubsearcher
 
 import android.support.annotation.IdRes
 import android.support.multidex.MultiDexApplication

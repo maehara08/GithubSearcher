@@ -1,4 +1,4 @@
-package com.riku.land.cs.githubsercher
+package com.riku.land.cs.githubsearcher
 
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity
 

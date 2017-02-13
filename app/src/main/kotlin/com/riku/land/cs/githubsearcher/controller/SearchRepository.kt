@@ -1,6 +1,6 @@
-package com.riku.land.cs.githubsercher.controller
+package com.riku.land.cs.githubsearcher.controller
 
-import com.riku.land.cs.githubsercher.model.entity.SearchResponse
+import com.riku.land.cs.githubsearcher.model.entity.SearchResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 import rx.Observable

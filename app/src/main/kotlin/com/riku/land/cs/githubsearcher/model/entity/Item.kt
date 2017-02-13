@@ -1,4 +1,4 @@
-package com.riku.land.cs.githubsercher.model.entity
+package com.riku.land.cs.githubsearcher.model.entity
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

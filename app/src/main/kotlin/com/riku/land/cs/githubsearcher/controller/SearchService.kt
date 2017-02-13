@@ -1,6 +1,6 @@
-package com.riku.land.cs.githubsercher.controller
+package com.riku.land.cs.githubsearcher.controller
 
-import com.riku.land.cs.githubsercher.model.entity.SearchResponse
+import com.riku.land.cs.githubsearcher.model.entity.SearchResponse
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
