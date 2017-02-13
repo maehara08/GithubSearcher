@@ -53,6 +53,7 @@ public class SearchFragment : BaseFragment() {
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .flatMap {
+                    Log.d(TAG, it)
                     service.searchClient(it)
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribeOn(Schedulers.io())
@@ -67,9 +68,8 @@ public class SearchFragment : BaseFragment() {
                     }
 
                     override fun onNext(t: SearchResponse?) {
-                        Log.d(TAG, t!!.items.get(0).fullName)
                         repositoryAdapter.clear()
-                        repositoryAdapter.addAll(t.items)
+                        repositoryAdapter.addAll(t!!.items)
                     }
                 })
     }
